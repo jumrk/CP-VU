@@ -76,7 +76,7 @@ export default function NewsDetailPage({ params }) {
               Lorem Ipsum（ロレム・イプサム）
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Lorem Ipsum（ロレム・イプサム）とは、印刷やレイアウトのデザインなどで使われる"ダミーテキスト（仮の文章）"**のことです。
+              Lorem Ipsum（ロレム・イプサム）とは、印刷やレイアウトのデザインなどで使われる&ldquo;ダミーテキスト（仮の文章）&rdquo;のことです。
               このテキストは、1500年代に無名の印刷工が様々の文章を組み合わせて見本用の文章を作成したのが始まりとされています。
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
