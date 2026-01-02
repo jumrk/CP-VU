@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import { products, newsArticles } from "@/lib/data";
 import ProductCard from "@/components/ProductCard";
 import ScrollAnimation from "@/components/ScrollAnimation";
@@ -6,6 +9,21 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
+  useEffect(() => {
+    // Scroll nhẹ xuống section services sau khi page load
+    const timer = setTimeout(() => {
+      const servicesSection = document.getElementById("services-section");
+      if (servicesSection) {
+        servicesSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 500); // Delay 500ms để đảm bảo page đã render xong
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <ScrollAnimation>
       <main className="min-h-screen bg-white">
@@ -32,7 +50,10 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className="py-12 md:py-16 bg-white border-b border-gray-100">
+        <section
+          id="services-section"
+          className="py-12 md:py-16 bg-white border-b border-gray-100"
+        >
           <div className="container mx-auto px-4">
             <div className="animate-on-scroll">
               <ServiceAccordion />
