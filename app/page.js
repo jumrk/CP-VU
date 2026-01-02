@@ -1,7 +1,9 @@
 import { products, newsArticles } from "@/lib/data";
 import ProductCard from "@/components/ProductCard";
 import ScrollAnimation from "@/components/ScrollAnimation";
+import ServiceAccordion from "@/components/ServiceAccordion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -17,10 +19,7 @@ export default function Home() {
                 私たちは届けます
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed animate-on-scroll-left">
-                CP
-                VU合同会社は、多様なビジネス分野において高品質なサービスを提供し、
-                <br className="hidden md:block" />
-                お客様の満足と信頼を第一に考えています。
+                高品質なサービスで、お客様の満足と信頼を第一に。
               </p>
               <Link
                 href="/shop"
@@ -28,6 +27,15 @@ export default function Home() {
               >
                 製品を見る
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-12 md:py-16 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4">
+            <div className="animate-on-scroll">
+              <ServiceAccordion />
             </div>
           </div>
         </section>
@@ -131,9 +139,19 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-4">接触</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-400 text-sm mb-4">
                   お問い合わせはお気軽にどうぞ
                 </p>
+                <div className="flex flex-col items-start">
+                  <div className="w-48 h-48 relative">
+                    <Image
+                      src="/images/image.png"
+                      alt="LINE QR Code"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
             <div className="border-t border-gray-800 pt-8 text-center">

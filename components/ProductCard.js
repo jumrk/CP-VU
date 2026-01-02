@@ -36,17 +36,17 @@ export default function ProductCard({ product }) {
           </h3>
           <div className="flex items-center gap-2 mb-1">
             <span className="text-lg font-semibold text-gray-900">
-              ¥{product.price.toLocaleString()}
+              ¥{product.price.toLocaleString('ja-JP')}
             </span>
             {product.oldPrice && (
               <span className="text-sm text-gray-400 line-through">
-                ¥{product.oldPrice.toLocaleString()}
+                ¥{product.oldPrice.toLocaleString('ja-JP')}
               </span>
             )}
           </div>
           {product.wholesalePrice && (
             <p className="text-xs text-gray-500">
-              卸売: ¥{product.wholesalePrice.toLocaleString()}
+              卸売: ¥{product.wholesalePrice.toLocaleString('ja-JP')}
             </p>
           )}
         </div>
